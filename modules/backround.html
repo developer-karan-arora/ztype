@@ -5,11 +5,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="../favicon.svg" type="image/x-icon">
     <title>Document</title>
     <style>
       body {
         /* background-color: rgb(17, 17, 17); */
-        background-image: url("images/bg/diamond.png");
+        background-image: url("../images/bg/diamond.png");
         background-size: 512px;
         
     }
@@ -40,11 +41,11 @@
     let animatedBgMask = new Image();
     let gradientImage = new Image();
     let spaceBackground = new Image();
-    animatedBgMain.src = "/images/bg/grid.png";
-    animatedBgHelper.src = "/images/bg/grid.png";
-    animatedBgMask.src = "/images/bg/grid.png";
-    gradientImage.src = "/images/bg/gradient.png";
-    spaceBackground.src = "/images/bg/space.jpg";
+    animatedBgMain.src = "../images/bg/grid.png";
+    animatedBgHelper.src = "../images/bg/grid.png";
+    animatedBgMask.src = "../images/bg/grid.png";
+    gradientImage.src = "../images/bg/gradient.png";
+    spaceBackground.src = "../images/bg/space.jpg";
     // animatedBg.onload=()=>
 
     // Play and pause mechanism
@@ -78,11 +79,11 @@
         ctx.drawImage(spaceBackground, 0, 0, 480, 620, 0, 0, 480, 720);
         
         handlePrevFrame();
+        handleBgAnimation(); 
         // handlePrevious frame
         // handle background animation
         // place player in map
         // place enemies from map stages 
-        // handleBgAnimation();
 
 
         if (isPaused) return;
