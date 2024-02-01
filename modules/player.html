@@ -38,25 +38,31 @@
         constructor(config){
             this.x=config.x||0;
             this.y=config.y||0;
-            this.gctx=config.gctx||0;
             this.img=new Image();
             this.img.src=config.src||0;
             this.size=24;
-            // this.img.onload=()=>{draw(this.gctx)};
+            this.focusCell=[0,0];
         }
         
         draw(globalCtx){
             globalCtx.drawImage(
-                this.img,0,0,
+                this.img,
+                this.focusCell[0]*24,this.focusCell[1],
                 this.size,this.size,
                 this.x,this.y,
                 this.size,this.size,
             )
         }
     }
-    let player = new Player({gctx:ctx,src:"../images/hero/sprite-ship.png",x:100,y:100});
+
+    let shipSprite = "../images/hero/sprite-ship.png";
+    let player = new Player({src:shipSprite,x:100,y:100});
     player.img.onload=()=>{player.draw(ctx);}
-    console.log("drawn")
+
+    let enemy = new Player({src:shipSprite,x:200,y:200});
+    enemy.img.onload=()=>{enemy.draw(ctx)}
+    enemy.focusCell = [4,0];
+    // console.log("drawn")
     // player.src = "../images/hero/sprite-ship.png"
     // player.onload=()=>{
     //     ctx.drawImage(player,0,0) 
