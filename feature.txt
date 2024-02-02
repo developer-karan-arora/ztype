@@ -1,0 +1,6 @@
+ULTIMATE SPACE FIGHTER
+1 - It is a 2D Space shooter game. User Have to type a word to kill enemy and clear 5 waves in fastest time 
+2 - Total User Played This Game 10K and Game is Played more then  1 lakhs times
+3 - Implemted algorithms to Genrate wave , shooting mechanism , health mechanism , enemy selection 
+4 - Also implemented features like music , sound Effect , Keyboard Shortcuts 
+5 - Firebase to the store userName and Password and user score which will reflect in a leaderboard and Store web Visitor count
